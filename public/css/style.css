@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+}
+
+body {
+    animation: animatedBackground 10s infinite linear; 
+}
+
+.container {
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Play', sans-serif;
+}
+
+.find {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 2px 1px orange;
+    color: aliceblue;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.logo  {
+    width: 4vw;
+    height: 4vw;
+}
+
+nav {
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    border: 2px black solid;
+    border-top: none;
+}
+
+a:hover {
+    text-shadow: 1px 1px 2px aliceblue;
+}
+
+input[type=range]  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 7px;
+    border: 1px solid rgb(162, 162, 162);
+    background-color: #fff;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    background: #ecf0f1;
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 10px/100%;
+    cursor: pointer;
+    width:15px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+  }
+
+  input[type=range]::-moz-range-track {
+      border-radius: 10px/100%;
+      height: 5px;
+      border: 1px solid rgb(162, 162, 162);
+      background-color: #fff;
+  }
+ input[type=range]::-moz-range-thumb {
+      background: #ecf0f1;
+      border: 1px solid rgb(162, 162, 162);
+      border-radius: 10px/100%;
+      cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked {
+    border: 1px solid white;
+    background-color: black;
+    box-shadow: 0 0 2px 2px whitesmoke;
+}
+
+input[type="checkbox"]:focus {
+    border: 1px solid white;
+    box-shadow: 0 0 2px 2px whitesmoke;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border: 1px solid black;
+    box-shadow: 0 0 2px 2px whitesmoke;
+}
+
+.ico {
+  width: 3vw;
+  height: 3vw;
+}
+
+  @keyframes animatedBackground {
+    0% {
+        background: 
+    url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 0%/10vw repeat-y, 
+    url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 0%/10vw repeat-y,
+
+    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 10% 0%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 25% 20%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 40% 0%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 60% 20%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 75% 0%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 90% 20%/7vw no-repeat,
+
+    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 10% 40%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 25% 60%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 40% 40%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 60% 60%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 75% 40%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 90% 60%/7vw no-repeat,
+
+    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 10% 80%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 25% 100%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 40% 80%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 60% 100%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 75% 80%/7vw no-repeat,
+    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 90% 100%/7vw no-repeat;
+      }
+      33% {
+        background: 
+        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 50%/10vw repeat-y, 
+        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 50%/10vw repeat-y,
+    
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 11% 1%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 26% 21%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 41% 1%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 59% 21%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 74% 1%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 89% 21%/7vw no-repeat,
+    
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 11% 41%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 26% 61%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 41% 41%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 59% 59%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 74% 39%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 89% 59%/7vw no-repeat,
+    
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 11% 79%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 26% 99%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 41% 79%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 59% 99%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 74% 79%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 89% 99%/7vw no-repeat;
+      }
+      100% {
+        background: 
+        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 101%/10vw repeat-y, 
+        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 101%/10vw repeat-y,
+    
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 10% 0%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 25% 20%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 40% 0%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 60% 20%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 75% 0%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 90% 20%/7vw no-repeat,
+    
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 10% 40%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 25% 60%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 40% 40%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 60% 60%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 75% 40%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 90% 60%/7vw no-repeat,
+    
+        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 10% 80%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 25% 100%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 40% 80%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 60% 100%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 75% 80%/7vw no-repeat,
+        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 90% 100%/7vw no-repeat;
+      }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
