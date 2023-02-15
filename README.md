@@ -1,2 +1,2 @@
-# Astrology-solo-project
-Astrology solo-project
+# Kino-solo-project
+Kino solo-project
