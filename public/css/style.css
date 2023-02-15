@@ -6,14 +6,6 @@ html, body {
   height: 100%;
 }
 
-html {
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-}
-
-body {
-    animation: animatedBackground 10s infinite linear; 
-}
-
 .container {
     height: 100%;
     padding-right: 15px;
@@ -105,86 +97,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   height: 3vw;
 }
 
-  @keyframes animatedBackground {
-    0% {
-        background: 
-    url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 0%/10vw repeat-y, 
-    url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 0%/10vw repeat-y,
+.poster {
+  height: 11vw;
+  border-radius: 20px;
+}
 
-    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 10% 0%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 25% 20%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 40% 0%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 60% 20%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 75% 0%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 90% 20%/7vw no-repeat,
-
-    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 10% 40%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 25% 60%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 40% 40%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 60% 60%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 75% 40%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 90% 60%/7vw no-repeat,
-
-    url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 10% 80%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 25% 100%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 40% 80%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 60% 100%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 75% 80%/7vw no-repeat,
-    url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 90% 100%/7vw no-repeat;
-      }
-      33% {
-        background: 
-        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 50%/10vw repeat-y, 
-        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 50%/10vw repeat-y,
-    
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 11% 1%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 26% 21%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 41% 1%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 59% 21%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 74% 1%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 89% 21%/7vw no-repeat,
-    
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 11% 41%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 26% 61%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 41% 41%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 59% 59%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 74% 39%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 89% 59%/7vw no-repeat,
-    
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 11% 79%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 26% 99%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 41% 79%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 59% 99%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 74% 79%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 89% 99%/7vw no-repeat;
-      }
-      100% {
-        background: 
-        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 0% 101%/10vw repeat-y, 
-        url("https://cdn-icons-png.flaticon.com/512/1275/1275099.png") 100% 101%/10vw repeat-y,
-    
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 10% 0%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 25% 20%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 40% 0%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 60% 20%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 75% 0%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 90% 20%/7vw no-repeat,
-    
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 10% 40%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 25% 60%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 40% 40%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 60% 60%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 75% 40%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 90% 60%/7vw no-repeat,
-    
-        url("https://cdn-icons-png.flaticon.com/512/1046/1046789.png") 10% 80%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/1377/1377878.png") 25% 100%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4693/4693272.png") 40% 80%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/4374/4374810.png") 60% 100%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/3418/3418886.png") 75% 80%/7vw no-repeat,
-        url("https://cdn-icons-png.flaticon.com/512/2611/2611185.png") 90% 100%/7vw no-repeat;
-      }
-  }
+.mobile-font {
+  font-size: 1.7vw;
+}
 
   @media (min-width: 768px) {
     .container {

@@ -5,15 +5,10 @@ const route = express.Router();
 const render = require('../lib/render');
 const Home = require('../views/Home');
 
-route.get('/', (req, res) => {
-  render(Home, { title: 'WhatToWatch' }, res);
-});
+const { isAuth } = require('../middlewares/midls');
 
-route.get('/random', async (req, res) => {
-  console.log(req.url.slice(8));
-  const response = await fetch(`https://api.kinopoisk.dev/movie${req.url.slice(8)}`);
-  const result = await response.json();
-  console.log(result);
+route.get('/', isAuth, (req, res) => {
+  render(Home, { title: 'WhatToWatch' }, res);
 });
 
 module.exports = route;

@@ -1,15 +1,17 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Home ({title}) {
+function Guest ({ title }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} script="/js/application.js">
       <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3">
         <a id="home" className="navbar-brand d-flex align-items-center" href="#">
           <img src="https://cdn-icons-png.flaticon.com/512/777/777242.png" className="logo me-2" alt="лого" />
           <p className="m-0">WhatToWatch</p>
         </a>
-        <a id="logout" className="nav-link me-3" href="#">Выйти</a>
+        <a id="signin" className="nav-link me-3" href="#">Войти</a>
+        <a id="signup" className="nav-link me-3" href="#">Зарегистрироваться</a>
+        <a id="about" className="nav-link" href="#">О сервисе</a>
       </nav>
       <main className="w-75 mx-auto mt-2 d-flex flex-column justify-content-center">
         <form id="find" className="mx-auto d-flex flex-column align-items-center find p-2">
@@ -77,14 +79,17 @@ function Home ({title}) {
           </div>
         </form>
       </main>
+      <script src="/js/guest/enter.js" />
       <script src="/js/getNoun.js" />
       <script src="/js/range.js" />
-      <script src="/js/logout.js" />
-      <script src="/js/getRandom.js" />
       <script src="/js/goHome.js" />
-      <script src="/js/user/user.js" />
+      <script src="/js/guest/signIn.js" />
+      <script src="/js/guest/signUp.js" />
+      <script src="/js/guest/getInfoAbout.js" />
+      <script src="/js/getRandom.js" />
+      <script src="/js/guest/guest.js" />
     </Layout>
   );
 }
 
-module.exports = Home;
+module.exports = Guest;
