@@ -12,5 +12,14 @@ function goHome(event) {
   const infoMessag = document.getElementById('infoMessage');
   if (infoMessag) infoMessag.remove();
 
+  const markersWindow = document.getElementById('markersWindow');
+  if (markersWindow) markersWindow.remove();
+
+  const allMarkersWindow = document.getElementById('allMarkersWindow');
+  if (allMarkersWindow) allMarkersWindow.remove();
+
+  const resultWindow = document.getElementById('resultWindow');
+  if (resultWindow) resultWindow.remove();
+
   find.classList.remove('d-none');
 }

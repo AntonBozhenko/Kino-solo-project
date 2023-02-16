@@ -4,14 +4,14 @@ const Layout = require('./Layout');
 function Guest ({ title }) {
   return (
     <Layout title={title} script="/js/application.js">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3">
-        <a id="home" className="navbar-brand d-flex align-items-center" href="#">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3 mobile-font-nav">
+        <a id="home" className="navbar-brand d-flex align-items-center custom-link">
           <img src="https://cdn-icons-png.flaticon.com/512/777/777242.png" className="logo me-2" alt="лого" />
           <p className="m-0">WhatToWatch</p>
         </a>
-        <a id="signin" className="nav-link me-3" href="#">Войти</a>
-        <a id="signup" className="nav-link me-3" href="#">Зарегистрироваться</a>
-        <a id="about" className="nav-link" href="#">О сервисе</a>
+        <a id="signin" className="nav-link me-3 d-flex align-items-center custom-link"><p className="m-0 me-2">Войти</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/1389/1389008.png" alt="войти" /></a>
+        <a id="signup" className="nav-link me-3 d-flex align-items-center custom-link"><p className="m-0 me-2">Зарегистрироваться</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/748/748137.png" alt="зарегистрироваться" /></a>
+        <a id="about" className="nav-link d-flex align-items-center custom-link"><p className="m-0 me-2">О сервисе</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/3503/3503827.png" alt="о сервисе" /></a>
       </nav>
       <main className="w-75 mx-auto mt-2 d-flex flex-column justify-content-center">
         <form id="find" className="mx-auto d-flex flex-column align-items-center find p-2">
@@ -80,6 +80,7 @@ function Guest ({ title }) {
         </form>
       </main>
       <script src="/js/guest/enter.js" />
+      <script src="/js/guest/register.js" />
       <script src="/js/getNoun.js" />
       <script src="/js/range.js" />
       <script src="/js/goHome.js" />

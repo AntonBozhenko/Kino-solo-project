@@ -27,8 +27,7 @@ function signIn(event) {
   <button id="enter" type="submit" class="btn btn-outline-light mb-2 w-25 py-1">Войти</button>
   <h5 class="mb-2">Войти через:</h5>
   <div class="d-flex justify-content-around">
-  <a id="google"><img class="ico me-5" src="https://cdn-icons-png.flaticon.com/512/733/733583.png" alt="google" /></a>
-  <a id="vk"><img class="ico" src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="VK" /></a>
+  <a href="/guest/google"id="google"><img class="ico" src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="google" /></a>
   </div>
   `;
 

@@ -4,12 +4,15 @@ const Layout = require('./Layout');
 function Home ({title}) {
   return (
     <Layout title={title}>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3">
-        <a id="home" className="navbar-brand d-flex align-items-center" href="#">
+      <img className="spinner d-none" src="https://cdn-icons-png.flaticon.com/512/7854/7854835.png" alt=""/>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3 mobile-font-nav">
+        <a id="home" className="navbar-brand d-flex align-items-center custom-link">
           <img src="https://cdn-icons-png.flaticon.com/512/777/777242.png" className="logo me-2" alt="лого" />
-          <p className="m-0">WhatToWatch</p>
+          <p className="m-0 f-5">WhatToWatch</p>
         </a>
-        <a id="logout" className="nav-link me-3" href="#">Выйти</a>
+        <a id="marker" className="nav-link d-flex align-items-center custom-link"><p className="m-0 me-2">Закладки</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/9431/9431303.png" alt="мои закладки" /></a>
+        <a id="community-marker" className="nav-link d-flex align-items-center ms-3 custom-link"><p className="m-0 me-2">Закладки сообщества</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/3090/3090423.png" alt="закладки сообщества" /></a>
+        <a id="logout" className="nav-link d-flex align-items-center ms-3 custom-link"><p className="m-0 me-2">Выйти</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/1286/1286853.png" alt="выйти" /></a>
       </nav>
       <main className="w-75 mx-auto mt-2 d-flex flex-column justify-content-center">
         <form id="find" className="mx-auto d-flex flex-column align-items-center find p-2">
@@ -77,11 +80,16 @@ function Home ({title}) {
           </div>
         </form>
       </main>
-      <script src="/js/getNoun.js" />
-      <script src="/js/range.js" />
-      <script src="/js/logout.js" />
-      <script src="/js/getRandom.js" />
       <script src="/js/goHome.js" />
+      <script src="/js/getNoun.js" />
+      <script src="/js/user/like.js" />
+      <script src="/js/user/showMarkers.js" />
+      <script src="/js/user/showAllMarkers.js" />
+      <script src="/js/user/deleteMarker.js" />
+      <script src="/js/user/dislike.js" />
+      <script src="/js/range.js" />
+      <script src="/js/user/logout.js" />
+      <script src="/js/getRandom.js" />
       <script src="/js/user/user.js" />
     </Layout>
   );

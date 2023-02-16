@@ -15,3 +15,5 @@ aboutLink.addEventListener('click', getInfoAbout);
 find.addEventListener('submit', getRandom);
 
 window.addEventListener('submit', enter);
+
+window.addEventListener('submit', register);

@@ -2,13 +2,22 @@ const express = require('express');
 
 const route = express.Router();
 
-const render = require('../lib/render');
-const Home = require('../views/Home');
-
 const { isAuth } = require('../middlewares/midls');
 
-route.get('/', isAuth, (req, res) => {
-  render(Home, { title: 'WhatToWatch' }, res);
-});
+const {
+  renderHomePage, addLike, deleteLike, lookAllMarkers, deleteOneMarker, getCommunityMarkersButNotUsers,
+} = require('../controllers/indexControllers');
+
+route.get('/', isAuth, renderHomePage);
+
+route.post('/like', isAuth, addLike);
+
+route.delete('/like', isAuth, deleteLike);
+
+route.get('/marker', isAuth, lookAllMarkers);
+
+route.delete('/marker', isAuth, deleteOneMarker);
+
+route.get('/community', isAuth, getCommunityMarkersButNotUsers);
 
 module.exports = route;
