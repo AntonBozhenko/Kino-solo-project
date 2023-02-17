@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.belongsTo(models.User, { foreignKey: 'userId' });
+
     }
   }
   AllLike.init({
@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
     movieLength: DataTypes.STRING,
     poster: DataTypes.STRING,
     description: DataTypes.TEXT,
-    userId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'AllLike',

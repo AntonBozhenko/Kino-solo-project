@@ -1,5 +1,4 @@
-const bcrypt = require('bcrypt');
-const sequelize = require('sequelize');
+const { Op } = require('sequelize');
 
 const { PrivateLike } = require('../db/models');
 const { AllLike } = require('../db/models');
@@ -20,7 +19,7 @@ exports.addLike = async (req, res) => {
     await AllLike.findOrCreate({
       where: { name, type },
       defaults: {
-        year, rating, movieLength, poster, description, userId,
+        year, rating, movieLength, poster, description,
       },
     });
 
@@ -75,19 +74,28 @@ exports.deleteOneMarker = async (req, res) => {
 };
 
 exports.getCommunityMarkersButNotUsers = async (req, res) => {
-  const { id } = req.session.user;
+  const { id: userId } = req.session.user;
   try {
-    const communityMarkers = await AllLike.findAll({
-      where: {
-        userId: {
-          [sequelize.Op.not]: id,
-        },
-      },
+    const userMarkers = await PrivateLike.findAll({ where: { userId } });
+    const userMoviesNames = [];
+    userMarkers.forEach((el) => userMoviesNames.push(el.name));
+
+    const communityMarkers = await AllLike.findAll();
+    const usersMoviesNames = [];
+
+    communityMarkers.forEach((el) => usersMoviesNames.push(el.name));
+
+    const diff = [];
+
+    usersMoviesNames.forEach((el) => {
+      if (!userMoviesNames.includes(el)) diff.push(el);
     });
 
-    const random = Math.floor(Math.random() * (communityMarkers.length - 0 + 1)) + 0;
+    const difCommunityMarkers = await AllLike.findAll({ where: { name: { [Op.like]: { [Op.any]: diff } } } });
 
-    res.json(communityMarkers[random]);
+    const random = Math.floor(Math.random() * (difCommunityMarkers.length - 0 + 1)) + 0;
+
+    res.json(difCommunityMarkers[random]);
   } catch (error) {
     console.log(error);
   }

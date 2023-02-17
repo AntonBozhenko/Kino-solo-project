@@ -10,7 +10,11 @@ async function showMarkers(event) {
     if (!result.join()) {
       const mainChilds = main.children;
       for (let i = 0; i < mainChilds.length; i += 1) {
-        mainChilds[i].classList.add('d-none');
+        if (mainChilds[i].id !== 'find') {
+          mainChilds[i].remove();
+        } else {
+          mainChilds[i].classList.add('d-none');
+        }
       }
 
       const infoMessage = document.createElement('div');
@@ -23,7 +27,11 @@ async function showMarkers(event) {
     } else {
       const mainChilds = main.children;
       for (let i = 0; i < mainChilds.length; i += 1) {
-        mainChilds[i].classList.add('d-none');
+        if (mainChilds[i].id !== 'find') {
+          mainChilds[i].remove();
+        } else {
+          mainChilds[i].classList.add('d-none');
+        }
       }
 
       const markersWindow = document.createElement('div');

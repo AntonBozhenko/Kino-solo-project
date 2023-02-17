@@ -34,7 +34,7 @@ async function getRandom(event) {
   });
 
   if (!type) {
-    type = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    type = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
     isRandomType = true;
   }
 
@@ -68,8 +68,7 @@ async function getRandom(event) {
         : resultType === 'tv-series' ? filmType = 'сериал'
           : resultType === 'cartoon' ? filmType = 'мультфильм'
             : resultType === 'anime' ? filmType = 'анимэ'
-              : resultType === 'animated-series' ? filmType = 'анимационный-мультфильм'
-                : filmType = 'тв-шоу';
+              : filmType = 'анимационный-мультфильм';
 
       const timeAddition = getNoun(result.movieLength, 'минута', 'минуты', 'минут');
 
@@ -135,7 +134,7 @@ async function getRandom(event) {
           }
 
           if (isRandomType) {
-            type = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            type = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
           }
 
           const newResponse = await fetch(`/random/?field=rating.kp&search=${rate[0]}-${rate[1]}&field=year&search=${years[0]}-${years[1]}&field=typeNumber&search=${type}&sortField=year&sortType=1&token=1YX1XTK-JSY4M7P-MJ1DSQP-F4RHVJ1&limit=1`);
@@ -173,8 +172,7 @@ async function getRandom(event) {
               : newResultType === 'tv-series' ? newFilmType = 'сериал'
                 : newResultType === 'cartoon' ? newFilmType = 'мультфильм'
                   : newResultType === 'anime' ? newFilmType = 'анимэ'
-                    : newResultType === 'animated-series' ? newFilmType = 'анимационный-мультфильм'
-                      : newFilmType = 'тв-шоу';
+                    : newFilmType = 'анимационный-мультфильм';
 
             const newTimeAddition = getNoun(newResult.movieLength, 'минута', 'минуты', 'минут');
 
@@ -186,13 +184,15 @@ async function getRandom(event) {
             }
 
             const newLike = document.getElementById('like');
-            newLike.dataset.name = newResult.name;
-            newLike.dataset.type = newFilmType;
-            newLike.dataset.year = newResult.year;
-            newLike.dataset.rating = newResult.kp;
-            newLike.dataset.movieLength = newResult.movieLength;
-            newLike.dataset.poster = newResult.url;
-            newLike.dataset.description = newResult.description;
+            if (newLike) {
+              newLike.dataset.name = newResult.name;
+              newLike.dataset.type = newFilmType;
+              newLike.dataset.year = newResult.year;
+              newLike.dataset.rating = newResult.kp;
+              newLike.dataset.movieLength = newResult.movieLength;
+              newLike.dataset.poster = newResult.url;
+              newLike.dataset.description = newResult.description;
+            }
 
             const resultW = document.getElementById('resultWindow');
             const resWChil = resultW.children;

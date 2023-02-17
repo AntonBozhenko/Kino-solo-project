@@ -8,7 +8,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const passport = require('passport');
-const { User } = require('./db/models');
+const { checkSession } = require('./middlewares/midls');
 
 const app = express();
 
@@ -25,9 +25,9 @@ app.use(cors(corsOptions));
 passport.use(new GoogleStrategy(
   {
   // all sensitive information should be in .env
-    clientID: '649936205441-t9kl48v2tehvepgfr2pqi056p81vi521.apps.googleusercontent.com',
-    clientSecret: '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',
-    callbackURL: 'http://localhost:3000/guest/google/callback',
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: process.env.CALLBACK_URL,
   },
   (accessToken, refreshToken, profile, done) => {
     done(null, profile);
@@ -60,14 +60,7 @@ app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(async (req, res, next) => {
-  if (req.session.passport) {
-    const currentUser = await User.findOrCreate({ where: { name: req.session.passport.user.userName, email: req.session.passport.user.email } });
-    req.session.user = { id: currentUser[0].id, name: currentUser[0].name };
-  }
-  res.locals.username = req.session?.user?.name;
-  next();
-});
+app.use(checkSession);
 
 // импорт роутов
 const indexRoutes = require('./routes/indexRoutes');

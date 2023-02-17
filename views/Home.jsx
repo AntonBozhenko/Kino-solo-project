@@ -31,10 +31,10 @@ function Home ({title}) {
 
             <div className="w-50">
               <label htmlFor="range-year-from" className="form-label fw-bold">Или в диапазоне:</label>
-              <div className="d-flex">
-                <input type="text" name="yearFrom" className="form-control me-1 py-0" placeholder="от" id="range-year-from" />
+              <div id="diapazon" className="d-flex">
+                <input type="text" name="yearFrom" className="form-control me-1 py-0" placeholder="от" id="range-year-from" pattern="196\d|19[7-9]\d|20[01]\d|202[0-3]" title="Год должен находиться в диапазоне от 1960 до 2023" />
                 <p className="align-self-center my-0 py-0">-</p>
-                <input type="text" name="yearTo" className="form-control ms-1 py-0" placeholder="до" id="range-year-to" />
+                <input type="text" name="yearTo" className="form-control ms-1 py-0" placeholder="до" id="range-year-to" pattern="196\d|19[7-9]\d|20[01]\d|202[0-3]" title="Год должен находиться в диапазоне от 1960 до 2023" />
               </div>
             </div>
           </div>
@@ -72,10 +72,6 @@ function Home ({title}) {
             <div className="form-check form-check-inline">
               <input className="form-check-input" type="checkbox" name="animation" id="animation" value="5" />
               <label className="form-check-label" htmlFor="animation">анимационный-мультфильм</label>
-            </div>
-            <div className="form-check form-check-inline me-0">
-              <input className="form-check-input" type="checkbox" name="tvShow" id="tv-show" value="6" />
-              <label className="form-check-label" htmlFor="tv-show">тв-шоу</label>
             </div>
           </div>
         </form>

@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.PrivateLike, { foreignKey: 'userId' });
-      this.hasMany(models.AllLike, { foreignKey: 'userId' });
     }
   }
   User.init({

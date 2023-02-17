@@ -1,17 +1,27 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Guest ({ title }) {
+function Guest({ title }) {
   return (
     <Layout title={title} script="/js/application.js">
+      <img className="spinner d-none" src="https://cdn-icons-png.flaticon.com/512/7854/7854835.png" alt=""/>
       <nav className="navbar navbar-expand-lg bg-body-tertiary w-85 mx-auto rounded-bottom px-3 mobile-font-nav">
         <a id="home" className="navbar-brand d-flex align-items-center custom-link">
           <img src="https://cdn-icons-png.flaticon.com/512/777/777242.png" className="logo me-2" alt="лого" />
           <p className="m-0">WhatToWatch</p>
         </a>
-        <a id="signin" className="nav-link me-3 d-flex align-items-center custom-link"><p className="m-0 me-2">Войти</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/1389/1389008.png" alt="войти" /></a>
-        <a id="signup" className="nav-link me-3 d-flex align-items-center custom-link"><p className="m-0 me-2">Зарегистрироваться</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/748/748137.png" alt="зарегистрироваться" /></a>
-        <a id="about" className="nav-link d-flex align-items-center custom-link"><p className="m-0 me-2">О сервисе</p><img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/3503/3503827.png" alt="о сервисе" /></a>
+        <a id="signin" className="nav-link me-3 d-flex align-items-center custom-link">
+          <p className="m-0 me-2">Войти</p>
+          <img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/1389/1389008.png" alt="войти" />
+        </a>
+        <a id="signup" className="nav-link me-3 d-flex align-items-center custom-link">
+          <p className="m-0 me-2">Зарегистрироваться</p>
+          <img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/748/748137.png" alt="зарегистрироваться" />
+        </a>
+        <a id="about" className="nav-link d-flex align-items-center custom-link">
+          <p className="m-0 me-2">О сервисе</p>
+          <img className="little-ico" src="https://cdn-icons-png.flaticon.com/512/3503/3503827.png" alt="о сервисе" />
+        </a>
       </nav>
       <main className="w-75 mx-auto mt-2 d-flex flex-column justify-content-center">
         <form id="find" className="mx-auto d-flex flex-column align-items-center find p-2">
@@ -30,10 +40,10 @@ function Guest ({ title }) {
 
             <div className="w-50">
               <label htmlFor="range-year-from" className="form-label fw-bold">Или в диапазоне:</label>
-              <div className="d-flex">
-                <input type="text" name="yearFrom" className="form-control me-1 py-0" placeholder="от" id="range-year-from" />
+              <div id="diapazon" className="d-flex diapazon-hidden">
+                <input type="text" name="yearFrom" className="form-control me-1 py-0" placeholder="от" id="range-year-from" pattern="196\d|19[7-9]\d|20[01]\d|202[0-3]" title="Год должен находиться в диапазоне от 1960 до 2023" />
                 <p className="align-self-center my-0 py-0">-</p>
-                <input type="text" name="yearTo" className="form-control ms-1 py-0" placeholder="до" id="range-year-to" />
+                <input type="text" name="yearTo" className="form-control ms-1 py-0" placeholder="до" id="range-year-to" pattern="196\d|19[7-9]\d|20[01]\d|202[0-3]" title="Год должен находиться в диапазоне от 1960 до 2023" />
               </div>
             </div>
           </div>
@@ -71,10 +81,6 @@ function Guest ({ title }) {
             <div className="form-check form-check-inline">
               <input className="form-check-input" type="checkbox" name="animation" id="animation" value="5" />
               <label className="form-check-label" htmlFor="animation">анимационный-мультфильм</label>
-            </div>
-            <div className="form-check form-check-inline me-0">
-              <input className="form-check-input" type="checkbox" name="tvShow" id="tv-show" value="6" />
-              <label className="form-check-label" htmlFor="tv-show">тв-шоу</label>
             </div>
           </div>
         </form>

@@ -9,7 +9,11 @@ async function showAllMarkers(event) {
 
     const mainChilds = main.children;
     for (let i = 0; i < mainChilds.length; i += 1) {
-      mainChilds[i].classList.add('d-none');
+      if (mainChilds[i].id !== 'find') {
+        mainChilds[i].remove();
+      } else {
+        mainChilds[i].classList.add('d-none');
+      }
     }
 
     const timeAddition = getNoun(result.movieLength, 'минута', 'минуты', 'минут');
